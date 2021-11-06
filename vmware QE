@@ -1,0 +1,20 @@
+
+arr2 = "abcdefg"
+arr1 = "123456789"
+def string_pair(arr1,arr2):
+  outarr = ""
+  l1 = len(arr1)
+  l2 = len(arr2)
+
+  if l1 < l2:
+    for index in range(len(arr1)):
+      outarr += arr1[index] + arr2[index]
+    outarr +=arr2[-(l2-l1):]
+  else:
+    for index in range(len(arr2)):
+      outarr += arr1[index] + arr2[index]
+    outarr +=arr1[-(l1-l2):]
+  return outarr
+
+
+print(string_pair(arr1,arr2))
